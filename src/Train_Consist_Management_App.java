@@ -17,7 +17,7 @@ public class Train_Consist_Management_App {
 
         formation.add("Sleeper");
 
-        System.out.println("Final Train Formation:"+formation);
+        System.out.println("Final Train Formation:\n"+formation);
         System.out.println("\n");
         System.out.println("Note:\n LinkedHashSet preserves insertion order and removes duplicates automatically\n");
         System.out.println("UC5 formation setup completed......");
