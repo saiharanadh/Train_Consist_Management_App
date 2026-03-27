@@ -1,25 +1,20 @@
-import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.Set;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Train_Consist_Management_App {
     public static void main(String [] args) {
-        System.out.println("========================================");
-        System.out.println("UC5 - Preserve Insertion Order of Bogies");
-        System.out.println("========================================");
+        System.out.println("===========================");
+        System.out.println("UC6 - Map Bogie to Capacity");
+        System.out.println("===========================");
 
-        Set<String> formation = new LinkedHashSet<>();
+        Map<String, Integer> capacityMap = new HashMap<>();
 
-        formation.add("Engine");
-        formation.add("Sleeper");
-        formation.add("Cargo");
-        formation.add("Guard");
+        capacityMap.put("First Class",24);
+        capacityMap.put("Cargo",120);
+        capacityMap.put("Sleeper",72);
+        capacityMap.put("AC Chair",56);
+        for(Map.Entry<String,Integer> Map :capacityMap.entrySet()){
 
-        formation.add("Sleeper");
-
-        System.out.println("Final Train Formation:\n"+formation);
-        System.out.println("\n");
-        System.out.println("Note:\n LinkedHashSet preserves insertion order and removes duplicates automatically\n");
-        System.out.println("UC5 formation setup completed......");
+        }
     }
 }
