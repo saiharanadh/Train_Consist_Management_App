@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 public class Train_Consist_Management_App {
     static class Bogie{
@@ -13,23 +11,27 @@ public class Train_Consist_Management_App {
         private int getCapacity() {
             return Capacity;
         }
+    }
        public static void main(String [] args) {
         System.out.println("==========================================");
         System.out.println("UC7 - Sort Bogies By Capacity (Comparator)");
         System.out.println("==========================================");
 
        List<Bogie> bogies = new ArrayList<>();
-       Bogie b1 = new Bogie ("Sleeper",72);
-       Bogie b2 = new Bogie ("AC Chair",56);
-       Bogie b3 = new Bogie ("FirstClass",24);
-       Bogie b4 = new Bogie ("General",90);
-        bogies.add(b1);
-        bogies.add(b2);
-        bogies.add(b3);
-        bogies.add(b4);
-        System.out.println("Before Sorting:\n"+bogies);
+        bogies.add(new Bogie ("Sleeper",72));
+        bogies.add(new Bogie ("AC Chair",56));
+        bogies.add(new Bogie ("FirstClass",24));
+        bogies.add(new Bogie ("General",90));
+
+        System.out.println("Before Sorting:\n");
+           for(Bogie b:bogies){
+               System.out.println(b.name+"->"+b.Capacity);
+           }
+
         bogies.sort(Comparator.comparingInt(Bogie::getCapacity));
-        System.out.println("After sorting By Capacity:\n"+bogies);
+        System.out.println("After sorting By Capacity:\n");
+           for(Bogie b:bogies){
+               System.out.println(b.name+"->"+b.Capacity);
+           }
         }
     }
-}
