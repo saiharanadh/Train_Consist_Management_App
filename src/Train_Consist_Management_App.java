@@ -1,6 +1,7 @@
 import java.util.*;
 
 public class Train_Consist_Management_App {
+    static List<Bogie> bogies;
     static class Bogie{
         String name;
         int Capacity;
@@ -12,9 +13,17 @@ public class Train_Consist_Management_App {
             return Capacity;
         }
     }
+    public static  List<Bogie> bogieList() {
+        List<Bogie> bogies = new ArrayList<>();
+        bogies.add(new Bogie("Sleeper", 72));
+        bogies.add(new Bogie("AC Chair", 56));
+        bogies.add(new Bogie("FirstClass", 24));
+        bogies.add(new Bogie("General", 90));
+        return bogies;
+    }
        public static void main(String [] args) {
         System.out.println("==========================================");
-        System.out.println("UC7 - Sort Bogies By Capacity (Comparator)");
+        System.out.println("UC8: Filter Passenger Bogies Using Streams");
         System.out.println("==========================================");
 
        List<Bogie> bogies = new ArrayList<>();
