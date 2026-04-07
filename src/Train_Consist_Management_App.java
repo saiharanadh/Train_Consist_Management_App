@@ -14,7 +14,7 @@ public class Train_Consist_Management_App {
         capacityMap.put("Sleeper",72);
         capacityMap.put("AC Chair",56);
         for(Map.Entry<String,Integer> Map :capacityMap.entrySet()){
-            System.out.println(Map.getkey()+"->"+Map.getvalue());
+            System.out.println(Map.getKey()+"->"+Map.getValue());
         }
         System.out.println("UC6 boogie-Capacity mapping completed..............");
     }
